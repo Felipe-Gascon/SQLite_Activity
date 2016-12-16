@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_alumnos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.felip.ejerciciosqllite.Alumnos">
+
+    <TextView
+        android:text="Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="27dp"
+        android:id="@+id/et_nomA" />
+
+    <TextView
+        android:text="Ciclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/et_edadA"
+        android:layout_alignStart="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/et_cicloA"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignStart="@+id/et_edadA" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/et_edadA"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/et_nomA" />
+
+    <TextView
+        android:text="Nota Media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_cicloA"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="53dp"
+        android:id="@+id/textView4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_below="@+id/et_cicloA"
+        android:layout_alignStart="@+id/et_cicloA"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="37dp"
+        android:id="@+id/et_notaMedia" />
+
+    <TextView
+        android:text="Edad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/et_nomA"
+        android:layout_alignStart="@+id/textView3" />
+
+    <Button
+        android:text="Guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_guardar"
+        android:layout_alignBaseline="@+id/btn_deleteId"
+        android:layout_alignBottom="@+id/btn_deleteId"
+        android:layout_alignStart="@+id/textView4" />
+
+    <Button
+        android:text="Borrar Registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_deleteId"
+        android:layout_below="@+id/et_notaMedia"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="69dp" />
+</RelativeLayout>
