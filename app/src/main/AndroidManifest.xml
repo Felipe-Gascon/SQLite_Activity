@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Alumnos" />
-        <activity android:name=".Profesores"></activity>
+        <activity android:name=".Profesores" />
+        <activity android:name=".Buscador"></activity>
     </application>
 
 </manifest>

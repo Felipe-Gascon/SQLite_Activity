@@ -18,7 +18,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="14dp"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,10 +29,11 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/textView"
         android:layout_marginStart="27dp"
-        android:id="@+id/et_nomA" />
+        android:id="@+id/et_nomA"
+        tools:ignore="LabelFor" />
 
     <TextView
-        android:text="Ciclo"
+        android:text="@string/ciclo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="59dp"
@@ -47,7 +49,8 @@
         android:id="@+id/et_cicloA"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_alignStart="@+id/et_edadA" />
+        android:layout_alignStart="@+id/et_edadA"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -56,10 +59,11 @@
         android:ems="10"
         android:id="@+id/et_edadA"
         android:layout_alignBottom="@+id/textView2"
-        android:layout_alignStart="@+id/et_nomA" />
+        android:layout_alignStart="@+id/et_nomA"
+        tools:ignore="LabelFor" />
 
     <TextView
-        android:text="Nota Media"
+        android:text="@string/nota_media"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_cicloA"
@@ -76,7 +80,8 @@
         android:layout_alignStart="@+id/et_cicloA"
         android:layout_marginStart="14dp"
         android:layout_marginTop="37dp"
-        android:id="@+id/et_notaMedia" />
+        android:id="@+id/et_notaMedia"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:text="Edad"
@@ -85,7 +90,8 @@
         android:layout_marginTop="53dp"
         android:id="@+id/textView2"
         android:layout_below="@+id/et_nomA"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_alignStart="@+id/textView3"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:text="Guardar"
@@ -94,7 +100,8 @@
         android:id="@+id/btn_guardar"
         android:layout_alignBaseline="@+id/btn_deleteId"
         android:layout_alignBottom="@+id/btn_deleteId"
-        android:layout_alignStart="@+id/textView4" />
+        android:layout_alignStart="@+id/textView4"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:text="Borrar Registro"
@@ -103,5 +110,6 @@
         android:id="@+id/btn_deleteId"
         android:layout_below="@+id/et_notaMedia"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="69dp" />
+        android:layout_marginTop="69dp"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>

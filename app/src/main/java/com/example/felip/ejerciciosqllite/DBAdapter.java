@@ -5,11 +5,15 @@ package com.example.felip.ejerciciosqllite;
  */
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class DBAdapter  {
@@ -34,7 +38,7 @@ public class DBAdapter  {
     private static final String DESPACHO = "Despacho";
 
     private static final String DATABASE_CREATE = "CREATE TABLE "+Tabla1+" (_id integer primary key autoincrement, Nombre text," +
-            "Edad integer, Ciclo text, NMedia double ); " + Tabla2+"(_id integer primary,Profesor,EdadProf,Ciclo_Prof, Curso_Tutor," +
+            "Edad integer, Ciclo text, NMedia double ); " + Tabla2+"(_id integer primary key autoincrement,Profesor,EdadProf,Ciclo_Prof, Curso_Tutor," +
             "Despacho);";
     private static final String DATABASE_DROP = "DROP TABLE IF EXISTS"+Tabla1+Tabla2+";";
 
@@ -93,7 +97,19 @@ public class DBAdapter  {
 
         db.insert(Tabla2,null,newValues);
     }
+    public ArrayList<String> loadEstudiantePorNombre(String nombre){
+        ArrayList<String>estudiantes = new ArrayList<String>();
+        Cursor cursorEstNom = db.rawQuery("SELECT * FROM "+Tabla1+" WHERE "+NOMBRE+" = '"+nombre+"'",null );
 
+        if(cursorEstNom != null && cursorEstNom.moveToFirst()){
+            do{
+                estudiantes.add(cursorEstNom.getString(1)+"ID "+cursorEstNom.getString(0));
+            }while(cursorEstNom.moveToNext());
+        }
+
+        return estudiantes;
+
+    }
 
     public void deleteAlumno(int id){
         dbHelper.getWritableDatabase().delete("Alumnos","_id"+id+"'",null);

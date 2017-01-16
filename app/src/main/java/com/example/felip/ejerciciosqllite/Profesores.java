@@ -1,10 +1,13 @@
 package com.example.felip.ejerciciosqllite;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.ArrayList;
 
 public class Profesores extends MainActivity {
     EditText et_prof,et_edad,et_cicloProf,et_cursTut,et_des;
@@ -37,15 +40,8 @@ public class Profesores extends MainActivity {
     }
 
     public void guardaDatos(){
-        String nomProf = et_prof.getText().toString();
-        int edadProf = Integer.parseInt(et_edad.getText().toString());
-        String cicloProf = et_cicloProf.getText().toString();
-        String cursoTut = et_cursTut.getText().toString();
-        String despa = et_des.getText().toString();
+        dbAdapter= new DBAdapter(this);
 
-        dbAdapter = new DBAdapter(this);
-        dbAdapter.open();
 
-        dbAdapter.insertaProfesor(nomProf,edadProf,cicloProf,cursoTut,despa);
     }
 }

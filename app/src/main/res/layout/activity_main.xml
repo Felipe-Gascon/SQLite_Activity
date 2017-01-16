@@ -10,31 +10,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.felip.ejerciciosqllite.MainActivity">
 
+
     <Button
-        android:text="Agregar Alumnos"
+        android:text="@string/borrar_bd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="69dp"
-        android:id="@+id/btn_alum"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/btn_borrado"
+        android:layout_below="@+id/btn_prof"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp" />
+
+    <Button
+        android:text="@string/agregar_profesor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_prof"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/btn_busca"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Agregar Profesor"
+        android:text="@string/agregar_alumnos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/btn_prof" />
+        android:id="@+id/btn_alum"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp" />
 
     <Button
-        android:text="Borrar BD"
-        android:layout_width="wrap_content"
+        android:text="buscar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_prof"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="79dp"
-        android:id="@+id/btn_borrado"
-        android:layout_alignParentEnd="true" />
+        android:id="@+id/btn_busca"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btn_alum"
+        android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>

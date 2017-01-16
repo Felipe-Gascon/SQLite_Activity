@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Ejercicio SQL Lite</string>
+    <string name="agregar_profesor">Agregar Profesor</string>
+    <string name="busca">Buscar </string>
+    <string name="buscar_profesores">Buscar Profesores</string>
+    <string name="buscar_por_ciclo_o_curso">Buscar por Ciclo o Curso</string>
+    <string name="agregar_alumnos">Agregar Alumnos</string>
+    <string name="borrar_bd">Borrar BD</string>
+    <string name="borrar_registro">Borrar Registro</string>
+    <string name="ciclo_profesor">Ciclo Profesor</string>
+    <string name="curso_tutor">Curso Tutor</string>
+    <string name="despacho">Despacho</string>
+    <string name="edad">Edad</string>
+    <string name="guardar">Guardar</string>
+    <string name="nombre">Nombre</string>
+    <string name="ciclo">Ciclo</string>
+    <string name="nota_media">Nota Media</string>
+    <string name="title_activity_buscador">Buscador</string>
 </resources>

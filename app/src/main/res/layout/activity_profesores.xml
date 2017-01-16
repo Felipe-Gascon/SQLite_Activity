@@ -11,7 +11,7 @@
     tools:context="com.example.felip.ejerciciosqllite.Profesores">
 
     <TextView
-        android:text="Nombre"
+        android:text="@string/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -28,10 +28,11 @@
         android:layout_toEndOf="@+id/textView5"
         android:layout_marginStart="37dp"
         android:layout_marginTop="44dp"
-        android:id="@+id/et_nomP" />
+        android:id="@+id/et_nomP"
+        tools:ignore="LabelFor" />
 
     <TextView
-        android:text="Edad"
+        android:text="@string/edad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_nomP"
@@ -40,7 +41,7 @@
         android:id="@+id/textView6" />
 
     <TextView
-        android:text="Ciclo Profesor"
+        android:text="@string/ciclo_profesor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView7"
@@ -49,7 +50,7 @@
         android:layout_marginTop="51dp" />
 
     <TextView
-        android:text="Curso Tutor"
+        android:text="@string/curso_tutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -58,7 +59,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Despacho"
+        android:text="@string/despacho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
@@ -74,7 +75,8 @@
         android:id="@+id/et_edadP"
         android:layout_alignBaseline="@+id/textView6"
         android:layout_alignBottom="@+id/textView6"
-        android:layout_toEndOf="@+id/textView9" />
+        android:layout_toEndOf="@+id/textView9"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -84,7 +86,8 @@
         android:layout_below="@+id/et_cursoTut"
         android:layout_alignEnd="@+id/et_cursoTut"
         android:layout_marginTop="21dp"
-        android:id="@+id/et_despa" />
+        android:id="@+id/et_despa"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -95,7 +98,8 @@
         android:layout_marginStart="23dp"
         android:layout_alignBaseline="@+id/textView7"
         android:layout_alignBottom="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_toEndOf="@+id/textView7"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -105,10 +109,11 @@
         android:id="@+id/et_cursoTut"
         android:layout_alignBaseline="@+id/textView8"
         android:layout_alignBottom="@+id/textView8"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="LabelFor" />
 
     <Button
-        android:text="Guardar"
+        android:text="@string/guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_guarda"
@@ -118,7 +123,7 @@
         android:layout_marginTop="23dp" />
 
     <Button
-        android:text="Borrar Registro"
+        android:text="@string/borrar_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_borraR"

@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_alum,btn_prof,btn_borrar;
+    ListView listado;
+    Button btn_alum,btn_prof,btn_borrar,btn_busqueda;
     DBAdapter dbAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
         btn_alum=(Button)findViewById(R.id.btn_alum);
         btn_prof=(Button)findViewById(R.id.btn_prof);
         btn_borrar=(Button)findViewById(R.id.btn_borrado);
+        btn_busqueda=(Button)findViewById(R.id.btn_busca);
         dbAdapter = new DBAdapter(this);
+
         btn_alum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,5 +42,15 @@ public class MainActivity extends AppCompatActivity {
                 dbAdapter.deleteDatabase("dbregistro.db");
             }
         });
+
+        btn_busqueda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_busq = new Intent(MainActivity.this,Buscador.class);
+               startActivity(intent_busq);
+
+            }
+        });
+
     }
 }
