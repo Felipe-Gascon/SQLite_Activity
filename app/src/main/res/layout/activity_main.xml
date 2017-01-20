@@ -12,21 +12,12 @@
 
 
     <Button
-        android:text="@string/borrar_bd"
+        android:text="@string/buscar_alumnos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_borrado"
-        android:layout_below="@+id/btn_prof"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
-
-    <Button
-        android:text="@string/agregar_profesor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_prof"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/btn_busca"
+        android:id="@+id/btn_busca"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/btn_alum"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -34,17 +25,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_alum"
+        android:layout_marginTop="25dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="65dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="buscar"
+        android:text="@string/buscar_profesores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_busca"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp"
+        android:id="@+id/btn_busca_prof"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/agregar_profesor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_busca"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/btn_alum"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/btn_prof"
+        android:layout_below="@+id/btn_busca_prof"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:text="@string/borrar_bd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_borrado"
+        android:layout_below="@+id/btn_prof"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="34dp" />
 
 
 </RelativeLayout>

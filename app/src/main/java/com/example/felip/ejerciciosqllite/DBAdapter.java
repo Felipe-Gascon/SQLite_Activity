@@ -99,11 +99,11 @@ public class DBAdapter  {
     }
     public ArrayList<String> loadEstudiantePorNombre(String nombre){
         ArrayList<String>estudiantes = new ArrayList<String>();
-        Cursor cursorEstNom = db.rawQuery("SELECT * FROM "+Tabla1+" WHERE "+NOMBRE+" = '"+nombre+"'",null );
+        Cursor cursorEstNom = db.rawQuery("SELECT * FROM "+Tabla1+" WHERE "+NOMBRE+" = '"+nombre,null );
 
         if(cursorEstNom != null && cursorEstNom.moveToFirst()){
             do{
-                estudiantes.add(cursorEstNom.getString(1)+"ID "+cursorEstNom.getString(0));
+                estudiantes.add("Alumno "+cursorEstNom.getString(1)+" ID "+cursorEstNom.getString(0));
             }while(cursorEstNom.moveToNext());
         }
 
@@ -111,11 +111,23 @@ public class DBAdapter  {
 
     }
 
-    public void deleteAlumno(int id){
-        dbHelper.getWritableDatabase().delete("Alumnos","_id"+id+"'",null);
+    public ArrayList<String>loadProfesores(String nombre){
+        ArrayList<String>profesores =  new ArrayList<String>();
+        Cursor cursorProf = db.rawQuery("SELECT * FROM "+Tabla2+" WHERE "+NOMBRE_PROF+" = '"+nombre+"'" ,null );
+
+        if(cursorProf!=null && cursorProf.moveToFirst()){
+            do {
+                profesores.add("Profesor: "+cursorProf.getString(1)+" ID: "+cursorProf.getString(0));
+            }while(cursorProf.moveToNext());
+        }
+        return profesores;
     }
-    public void deleteProfesor(String id){
-        dbHelper.getWritableDatabase().delete("Profesores","_id"+id+"'",null);
+
+    public void deleteAlumno(String nombre){
+        dbHelper.getWritableDatabase().delete("Alumnos","Nombre"+nombre+"'",null);
+    }
+    public void deleteProfesor(String nom){
+        dbHelper.getWritableDatabase().delete("Profesores",NOMBRE_PROF+nom+"'",null);
     }
     public void deleteDatabase(String f){
         context.deleteDatabase(f);

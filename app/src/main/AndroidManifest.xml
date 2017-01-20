@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".Alumnos" />
         <activity android:name=".Profesores" />
-        <activity android:name=".Buscador"></activity>
+        <activity android:name=".Buscador" />
+        <activity android:name=".BuscaProfesor" />
     </application>
 
 </manifest>

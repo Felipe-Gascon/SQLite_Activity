@@ -9,8 +9,9 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     ListView listado;
-    Button btn_alum,btn_prof,btn_borrar,btn_busqueda;
+    Button btn_alum,btn_prof,btn_borrar,btn_busqueda,buscaProf;
     DBAdapter dbAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
         btn_prof=(Button)findViewById(R.id.btn_prof);
         btn_borrar=(Button)findViewById(R.id.btn_borrado);
         btn_busqueda=(Button)findViewById(R.id.btn_busca);
+        buscaProf =(Button)findViewById(R.id.btn_busca_prof);
+
         dbAdapter = new DBAdapter(this);
+
 
         btn_alum.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        buscaProf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentProf = new Intent(MainActivity.this,BuscaProfesor.class);
+                startActivity(intentProf);
+            }
+        });
+
+
 
     }
 }
